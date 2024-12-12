@@ -1,8 +1,8 @@
 {
   "name": "com.appidea.minigames.letter_game",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "displayName": "letter_game",
-  "description": "game is about to drag letters and fill word",
+  "description": "this game is about to snap letters",
   "dependencies": {
     "com.unity.addressables": "1.21.21",
     "com.unity.render-pipelines.universal": "~14.0.10"

@@ -1,12 +1,12 @@
 {
-    "name": "com.appidea.MiniGamePlatform.YOUR_MINI_GAME_NAME",
-    "rootNamespace": "com.appidea.MiniGamePlatform.YOUR_MINI_GAME_NAME",
+    "name": "com.appidea.MiniGamePlatform.Letter_Game",
+    "rootNamespace": "com.appidea.MiniGamePlatform.Letter_Game",
     "references": [
         "com.appidea.MiniGamePlatform.CommunicationAPI",
         "Unity.Addressables",
-        "Unity.TextMeshPro",
         "spine-csharp",
-        "spine-unity"
+        "spine-unity",
+        "Unity.TextMeshPro"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

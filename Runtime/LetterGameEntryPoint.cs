@@ -1,3 +1,4 @@
+using System;
 using System.Threading.Tasks;
 using com.appidea.MiniGamePlatform.CommunicationAPI;
 using UnityEngine;
@@ -8,7 +9,8 @@ public class LetterGameEntryPoint : BaseMiniGameEntryPoint
     
     protected override Task LoadInternal()
     {
-        Instantiate(gamePrefab);
+        var gameManager = Instantiate(gamePrefab);
+        gameManager.GetComponent<LetterSpawner>().SetEntryPoint(this);
         return Task.CompletedTask;
     }
 
@@ -17,3 +19,6 @@ public class LetterGameEntryPoint : BaseMiniGameEntryPoint
         return Task.CompletedTask;
     }
 }
+
+
+

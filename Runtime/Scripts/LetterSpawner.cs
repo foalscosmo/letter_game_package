@@ -32,6 +32,7 @@ public class LetterSpawner : MonoBehaviour
     private LevelConfig CurrentLevel => Levels[currentLevelIndex];
     private string HappyAnimation = "Happy-Talking";
     private string IdleAnimation = "Idle";
+    private LetterGameEntryPoint _entryPoint;
 
     void Start()
     {
@@ -109,9 +110,27 @@ public class LetterSpawner : MonoBehaviour
         {
             FinishPanel.SetActive(true);
             FinishParticle.Play();
-
+            SetFinishForPackage();
         }
     }
+    
+    
+    private void SetFinishForPackage()
+    {
+        StartCoroutine(FinishAfterFireworks());
+    }
+
+    public void SetEntryPoint(LetterGameEntryPoint entryPoint)
+    {
+        _entryPoint = entryPoint;
+    }
+
+    private IEnumerator FinishAfterFireworks()
+    {
+        yield return new WaitForSecondsRealtime(5f);
+        _entryPoint.InvokeGameFinished();
+    }   
+    
     void PlayAnimation()
     {
         GameObject[] animals = GameObject.FindGameObjectsWithTag("Animal");
