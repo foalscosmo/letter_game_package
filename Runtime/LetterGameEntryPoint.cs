@@ -7,11 +7,6 @@ public class LetterGameEntryPoint : BaseMiniGameEntryPoint
 {
     [SerializeField] private GameObject gamePrefab;
 
-    private void Awake()
-    {
-        LoadInternal();
-    }
-
     protected override Task LoadInternal()
     {
         var gameManager = Instantiate(gamePrefab);
